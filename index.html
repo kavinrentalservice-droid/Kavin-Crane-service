@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kavin Crane Service provides crane hire and lifting support for construction, industry, and on-site projects. We lift. You build."
+    />
+    <meta name="theme-color" content="#171916" />
+    <title>Kavin Crane Service | We lift. You build.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#171916",
+              forest: "#242820",
+              lime: "#f5b82e",
+              paper: "#f3f0e8",
+              muted: "#77776f",
+            },
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              display: ["Barlow Condensed", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: "DM Sans", sans-serif; }
+      .hero-image {
+        background:
+          radial-gradient(ellipse at 78% 55%, rgba(245, 184, 46, .12), transparent 44%),
+          linear-gradient(115deg, #171916 4%, #20221c 62%, #171916 100%);
+      }
+      .hero-crane-overlay {
+        background:
+          linear-gradient(90deg, rgba(23, 25, 22, .94) 0%, rgba(23, 25, 22, .78) 42%, rgba(23, 25, 22, .18) 100%),
+          linear-gradient(0deg, rgba(23, 25, 22, .62) 0%, transparent 58%);
+      }
+      .hero-crane {
+        filter: drop-shadow(0 28px 28px rgba(0, 0, 0, .35));
+      }
+      .grid-pattern {
+        background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+        background-size: 56px 56px;
+      }
+      .hero-title {
+        font-size: clamp(5.25rem, 12vw, 10.75rem);
+        line-height: .78;
+        letter-spacing: -.045em;
+      }
+      .service-card {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(23, 25, 22, .12);
+        border-radius: 0;
+        background: transparent;
+        transition: background-color .25s ease, color .25s ease, transform .25s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        background-color: #171916;
+        color: #f3f0e8;
+      }
+      .service-card:hover .service-copy { color: rgba(243, 240, 232, .65); }
+      .service-card:hover .service-link { color: #f5b82e; }
+      .service-card:hover .service-icon { background: #f5b82e; color: #171916; }
+      .service-card:hover .service-index { color: rgba(243, 240, 232, .25); }
+      .service-index {
+        position: absolute;
+        top: 12px;
+        right: 24px;
+        color: rgba(23, 25, 22, .12);
+        font: 800 5rem/.8 "Barlow Condensed", sans-serif;
+      }
+      .lift-ticker { transform: rotate(-1.5deg) scale(1.02); }
+      .lift-ticker-track { animation: ticker 28s linear infinite; }
+      @keyframes ticker { to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) {
+        .lift-ticker-track { animation: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <header class="absolute inset-x-0 top-0 z-20 border-b border-white/10">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12" aria-label="Main navigation">
+        <a href="#home" class="flex items-center gap-3 text-white" aria-label="Kavin Crane Service home">
+          <span class="flex h-11 w-11 items-center justify-center rounded-sm bg-lime text-ink">
+            <svg viewBox="0 0 32 32" class="h-7 w-7" fill="none" aria-hidden="true">
+              <path d="M7 25V7h15v6h4v5h-4v-5M7 11h11M11 7v4m7-4v4M22 18v4a4 4 0 1 1-8 0v-2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="leading-tight">
+            <span class="block font-display text-sm font-extrabold tracking-wide">KAVIN</span>
+            <span class="block text-[10px] font-semibold uppercase tracking-[.22em] text-white/65">Crane Service</span>
+          </span>
+        </a>
+
+        <button id="menu-toggle" class="rounded-lg p-2 text-white md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div class="hidden items-center gap-8 md:flex">
+          <a class="text-sm font-medium text-white/80 transition hover:text-lime" href="#services">Services</a>
+          <a class="text-sm font-medium text-white/80 transition hover:text-lime" href="#about">About</a>
+          <a class="text-sm font-medium text-white/80 transition hover:text-lime" href="#approach">Our approach</a>
+          <a class="rounded-full bg-lime px-5 py-3 text-sm font-bold text-ink transition hover:bg-white" href="#contact">
+            Let’s talk <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="mx-5 hidden rounded-2xl border border-white/10 bg-ink/95 p-3 shadow-xl backdrop-blur md:hidden">
+        <a class="block rounded-xl px-4 py-3 text-sm font-medium text-white hover:bg-white/10" href="#services">Services</a>
+        <a class="block rounded-xl px-4 py-3 text-sm font-medium text-white hover:bg-white/10" href="#about">About</a>
+        <a class="block rounded-xl px-4 py-3 text-sm font-medium text-white hover:bg-white/10" href="#approach">Our approach</a>
+        <a class="mt-2 block rounded-xl bg-lime px-4 py-3 text-sm font-bold text-ink" href="#contact">Let’s talk ↗</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero-image relative flex min-h-[760px] items-center overflow-hidden bg-ink pb-16 pt-32 text-white sm:min-h-[850px]">
+        <img src="./crane-background.png" alt="" class="hero-crane pointer-events-none absolute bottom-[5%] right-[-14%] z-0 w-[110%] max-w-[1150px] object-contain opacity-70 sm:right-[-3%] sm:w-[92%] sm:opacity-85 lg:bottom-[1%] lg:right-[-3%] lg:w-[80%]" fetchpriority="high" />
+        <div class="hero-crane-overlay pointer-events-none absolute inset-0 z-[1]" aria-hidden="true"></div>
+        <div class="grid-pattern pointer-events-none absolute inset-0 z-[2] opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -right-24 top-1/4 z-[3] hidden h-[620px] w-[620px] rounded-full border border-lime/25 lg:block" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -right-12 top-[31%] z-[3] hidden h-[500px] w-[500px] rounded-full border border-lime/20 lg:block" aria-hidden="true"></div>
+        <div class="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.2fr_.8fr] lg:px-12">
+          <div class="max-w-4xl">
+            <div class="mb-9 inline-flex items-center gap-3 border-l-4 border-lime bg-ink/50 px-4 py-2 text-[11px] font-bold uppercase tracking-[.2em] text-white/85 backdrop-blur">
+              <span class="h-2 w-2 rotate-45 bg-lime"></span>
+              Crane hire / lifting support
+            </div>
+            <h1 class="hero-title font-display font-extrabold uppercase">
+              WE LIFT.<br />
+              <span class="text-lime">YOU BUILD.</span>
+            </h1>
+            <p class="mt-9 max-w-lg border-l border-white/35 pl-5 text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+              The muscle behind your momentum. Crane hire and lifting support built around your site, your schedule, and your next big move.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#contact" class="inline-flex items-center justify-center gap-3 bg-lime px-7 py-4 text-sm font-bold uppercase tracking-wider text-ink transition hover:-translate-y-0.5 hover:bg-white">
+                Plan your lift <span class="text-lg" aria-hidden="true">↗</span>
+              </a>
+              <a href="#services" class="inline-flex items-center justify-center border border-white/35 px-7 py-4 text-sm font-semibold uppercase tracking-wider text-white transition hover:border-lime hover:text-lime">
+                See what we do
+              </a>
+            </div>
+            <div class="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-[10px] font-bold uppercase tracking-[.17em] text-white/65">
+              <span class="flex items-center gap-2"><span class="text-lime">✳</span> Thoughtful planning</span>
+              <span class="flex items-center gap-2"><span class="text-lime">✳</span> Site-first service</span>
+              <span class="flex items-center gap-2"><span class="text-lime">✳</span> Clear communication</span>
+            </div>
+          </div>
+
+          <div class="hidden self-end pb-2 text-right lg:block">
+            <p class="font-display text-8xl font-bold leading-none text-lime/90">K<span class="text-white/70">/</span>C</p>
+            <p class="mt-3 text-[10px] font-bold uppercase tracking-[.24em] text-white/60">Kavin Crane Service</p>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-2 bg-lime"></div>
+      </section>
+
+      <div class="overflow-hidden bg-lime py-4 text-ink">
+        <div class="lift-ticker">
+          <div class="lift-ticker-track flex w-max items-center gap-8 whitespace-nowrap font-display text-2xl font-extrabold uppercase tracking-wide sm:text-3xl" aria-label="Built for the heavy work">
+            <span>Built for the heavy work</span><span aria-hidden="true">✳</span><span>Made for the big moves</span><span aria-hidden="true">✳</span><span>Ready when your site is</span><span aria-hidden="true">✳</span>
+            <span aria-hidden="true">Built for the heavy work</span><span aria-hidden="true">✳</span><span aria-hidden="true">Made for the big moves</span><span aria-hidden="true">✳</span><span aria-hidden="true">Ready when your site is</span><span aria-hidden="true">✳</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="services" class="py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">01 / What we do</p>
+              <h2 class="mt-4 max-w-lg font-display text-5xl font-extrabold uppercase leading-[.92] tracking-[-.02em] sm:text-6xl">Heavy lifting.<br />Handled right.</h2>
+            </div>
+            <p class="max-w-xl text-base leading-7 text-muted lg:justify-self-end">
+              Every site has its own constraints. We work with you to understand the job, coordinate the details, and support a smooth lift from setup through completion.
+            </p>
+          </div>
+
+          <div class="mt-14 grid gap-4 md:grid-cols-3">
+            <article class="service-card group p-7 sm:p-8">
+              <span class="service-index" aria-hidden="true">01</span>
+              <span class="service-icon flex h-12 w-12 items-center justify-center bg-lime/30 text-forest">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" aria-hidden="true">
+                  <path d="M4 19h16M6 19V8h8v11m0-7h4l2 3v4m-6-7V5h4M8 11h4m-4 4h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3 class="mt-7 font-display text-3xl font-bold uppercase">Crane hire</h3>
+              <p class="service-copy mt-3 text-sm leading-6 text-muted">Crane support for construction, industrial, and general lifting requirements, matched to the needs of your site.</p>
+              <a href="#contact" class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-forest">Discuss availability <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="service-card group p-7 sm:p-8">
+              <span class="service-index" aria-hidden="true">02</span>
+              <span class="service-icon flex h-12 w-12 items-center justify-center bg-lime/30 text-forest">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" aria-hidden="true">
+                  <path d="M4 20h16M6 16l4-4 3 2 5-7M14 7h4v4M6 4v4m-2-2h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3 class="mt-7 font-display text-3xl font-bold uppercase">Lifting operations</h3>
+              <p class="service-copy mt-3 text-sm leading-6 text-muted">On-site lifting assistance with attention to the load, access, surroundings, and coordination your operation calls for.</p>
+              <a href="#contact" class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-forest">Plan a lift <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="service-card group p-7 sm:p-8">
+              <span class="service-index" aria-hidden="true">03</span>
+              <span class="service-icon flex h-12 w-12 items-center justify-center bg-lime/30 text-forest">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" aria-hidden="true">
+                  <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.64 5.64l2.12 2.12m8.48 8.48 2.12 2.12m0-12.72-2.12 2.12m-8.48 8.48-2.12 2.12M9 9h6v6H9z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3 class="mt-7 font-display text-3xl font-bold uppercase">Site coordination</h3>
+              <p class="service-copy mt-3 text-sm leading-6 text-muted">Straightforward communication around timing, site access, and lift requirements to help everyone stay aligned.</p>
+              <a href="#contact" class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-forest">Talk through your site <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-forest py-24 text-white sm:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20 lg:px-12">
+          <div class="relative min-h-[390px] overflow-hidden rounded-3xl bg-[#314438]">
+            <img
+              src="./about-crane.png"
+              alt="ACE mobile crane ready for lifting work at an industrial site"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-7 left-7 right-7">
+              <p class="font-display text-2xl font-bold">Good work begins with a clear plan.</p>
+              <p class="mt-2 text-sm text-white/70">One job, one team, working in sync.</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-lime">About Kavin Crane Service</p>
+            <h2 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">Serious about the details that keep a job moving.</h2>
+            <p class="mt-6 text-base leading-7 text-white/70">
+              Lifting takes more than machinery. It takes preparation, communication, and people who understand how their work fits into yours. Kavin Crane Service is here to make crane hire and lifting support easier to plan.
+            </p>
+            <p class="mt-4 text-base leading-7 text-white/70">
+              From the first conversation to the final position, we focus on understanding your requirements and keeping the work coordinated on site.
+            </p>
+            <a href="#contact" class="mt-8 inline-flex items-center gap-3 rounded-full bg-lime px-6 py-4 text-sm font-bold text-ink transition hover:bg-white">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="approach" class="py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <div class="max-w-2xl">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">A straightforward process</p>
+            <h2 class="mt-4 font-display text-4xl font-extrabold tracking-[-.04em] sm:text-5xl">From first call to lift day.</h2>
+          </div>
+          <div class="mt-14 grid gap-8 md:grid-cols-3">
+            <div class="border-t border-ink/15 pt-6">
+              <span class="font-display text-sm font-extrabold text-forest">01 / UNDERSTAND</span>
+              <h3 class="mt-5 font-display text-xl font-bold">Tell us about the job</h3>
+              <p class="mt-3 text-sm leading-6 text-muted">Share what needs lifting, your site conditions, and your expected timing.</p>
+            </div>
+            <div class="border-t border-ink/15 pt-6">
+              <span class="font-display text-sm font-extrabold text-forest">02 / COORDINATE</span>
+              <h3 class="mt-5 font-display text-xl font-bold">Work through the details</h3>
+              <p class="mt-3 text-sm leading-6 text-muted">We’ll discuss the requirements and the practical arrangements for your site.</p>
+            </div>
+            <div class="border-t border-ink/15 pt-6">
+              <span class="font-display text-sm font-extrabold text-forest">03 / GET TO WORK</span>
+              <h3 class="mt-5 font-display text-xl font-bold">Move forward together</h3>
+              <p class="mt-3 text-sm leading-6 text-muted">Keep communication clear as the job progresses, right through the lift.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="px-5 pb-20 sm:px-8 sm:pb-24 lg:px-12">
+        <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-ink px-7 py-14 text-white sm:px-12 sm:py-16 lg:px-16">
+          <div class="grid-pattern absolute inset-0 opacity-50" aria-hidden="true"></div>
+          <div class="absolute -right-20 -top-32 h-96 w-96 rounded-full bg-lime/10 blur-3xl" aria-hidden="true"></div>
+          <div class="relative flex flex-col justify-between gap-9 lg:flex-row lg:items-end">
+            <div class="max-w-2xl">
+              <p class="text-xs font-bold uppercase tracking-[.2em] text-lime">Have a lift coming up?</p>
+              <h2 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">Let’s talk through what you need.</h2>
+              <p class="mt-5 max-w-xl text-base leading-7 text-white/65">Share a few details about your project and we can start a conversation about crane hire and lifting support.</p>
+            </div>
+            <a href="#contact-info" class="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-lime px-7 py-4 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-white">
+              Add contact details <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p id="contact-info" class="relative mt-10 border-t border-white/15 pt-5 text-xs leading-5 text-white/45">Add Kavin Crane Service’s preferred phone number or email address here before publishing.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-black/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 text-xs text-muted sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+        <a href="#home" class="flex items-center gap-2 font-display font-extrabold tracking-wide text-ink">
+          <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-lime text-ink" aria-hidden="true">
+            <svg viewBox="0 0 32 32" class="h-5 w-5" fill="none"><path d="M7 25V7h15v6h4v5h-4v-5M7 11h11M22 18v4a4 4 0 1 1-8 0v-2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          KAVIN CRANE SERVICE
+        </a>
+        <p>Crane hire &amp; lifting support.</p>
+        <p>© <span id="year"></span> Kavin Crane Service. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        menuToggle.setAttribute("aria-label", isExpanded ? "Open navigation menu" : "Close navigation menu");
+        mobileMenu.classList.toggle("hidden", isExpanded);
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

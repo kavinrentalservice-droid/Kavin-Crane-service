@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <title>Kavin Crane Service | We lift. You build.</title>
-    <link rel="icon" type="image/png" href="./header-logo.png" />
+    <link rel="icon" type="image/png" href="./header-logo-transparent.png" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,13 +19,13 @@
     />
   </head>
   <body class="bg-paper text-ink antialiased">
-    <header class="absolute inset-x-0 top-0 z-20 border-b border-ink/10">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12" aria-label="Main navigation">
-        <a href="#home" class="flex items-center gap-3 text-ink" aria-label="Kavin Crane Service home">
+    <header class="absolute inset-x-0 top-0 z-20">
+      <nav class="site-nav glass-surface mx-5 mt-3 flex items-center justify-between rounded-2xl px-3 py-2 sm:mx-8 sm:mt-4 sm:px-5 sm:py-3 lg:mx-auto lg:max-w-7xl lg:px-8" aria-label="Main navigation">
+        <a href="#home" class="logo-card glass-surface flex items-center gap-3 rounded-xl p-1.5 text-ink" aria-label="Kavin Crane Service home">
           <img
-            src="./header-logo.png"
+            src="./header-logo-transparent.png"
             alt="Kavin Crane Service"
-            class="h-16 w-16 object-contain sm:h-[72px] sm:w-[72px]"
+            class="h-16 w-16 object-contain sm:h-20 sm:w-20"
             fetchpriority="high"
           />
         </a>
@@ -37,31 +37,31 @@
         </button>
 
         <div class="hidden items-center gap-8 md:flex">
-          <a class="text-sm font-medium text-ink/80 transition hover:text-forest" href="#fleet">Fleet</a>
-          <a class="text-sm font-medium text-ink/80 transition hover:text-forest" href="#services">Services</a>
-          <a class="text-sm font-medium text-ink/80 transition hover:text-forest" href="#about">About</a>
-          <a class="text-sm font-medium text-ink/80 transition hover:text-forest" href="#approach">Our approach</a>
-          <a class="rounded-full bg-lime px-5 py-3 text-sm font-bold text-ink transition hover:bg-white" href="#contact">
+          <a class="nav-link rounded-full px-4 py-2 text-sm font-medium text-ink/80 transition hover:text-ink" href="#fleet">Fleet</a>
+          <a class="nav-link rounded-full px-4 py-2 text-sm font-medium text-ink/80 transition hover:text-ink" href="#services">Services</a>
+          <a class="nav-link rounded-full px-4 py-2 text-sm font-medium text-ink/80 transition hover:text-ink" href="#about">About</a>
+          <a class="nav-link rounded-full px-4 py-2 text-sm font-medium text-ink/80 transition hover:text-ink" href="#approach">Our approach</a>
+          <a class="nav-contact rounded-full bg-lime px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-amber-300" href="#contact">
             Let’s talk <span aria-hidden="true">↗</span>
           </a>
         </div>
       </nav>
       <div id="mobile-menu" class="mx-5 hidden rounded-2xl border border-ink/10 bg-white/95 p-3 text-ink shadow-xl backdrop-blur md:hidden">
-        <a class="block rounded-xl px-4 py-3 text-sm font-medium text-ink hover:bg-ink/5" href="#fleet">Fleet</a>
-        <a class="block rounded-xl px-4 py-3 text-sm font-medium text-ink hover:bg-ink/5" href="#services">Services</a>
-        <a class="block rounded-xl px-4 py-3 text-sm font-medium text-ink hover:bg-ink/5" href="#about">About</a>
-        <a class="block rounded-xl px-4 py-3 text-sm font-medium text-ink hover:bg-ink/5" href="#approach">Our approach</a>
-        <a class="mt-2 block rounded-xl bg-lime px-4 py-3 text-sm font-bold text-ink" href="#contact">Let’s talk ↗</a>
+        <a class="mobile-nav-link nav-link mb-1 block rounded-xl px-4 py-3 text-sm font-medium text-ink" href="#fleet">Fleet</a>
+        <a class="mobile-nav-link nav-link mb-1 block rounded-xl px-4 py-3 text-sm font-medium text-ink" href="#services">Services</a>
+        <a class="mobile-nav-link nav-link mb-1 block rounded-xl px-4 py-3 text-sm font-medium text-ink" href="#about">About</a>
+        <a class="mobile-nav-link nav-link mb-1 block rounded-xl px-4 py-3 text-sm font-medium text-ink" href="#approach">Our approach</a>
+        <a class="nav-contact mt-2 block rounded-xl bg-lime px-4 py-3 text-sm font-bold text-ink" href="#contact">Let’s talk ↗</a>
       </div>
     </header>
 
     <main>
       <section id="home" class="hero-image relative flex min-h-[760px] items-center overflow-hidden bg-white pb-24 pt-32 text-ink sm:min-h-[820px]" role="region" aria-roledescription="carousel" aria-label="Featured crane services">
-        <img id="hero-crane" src="./crane-background.png" alt="" class="hero-crane pointer-events-none absolute bottom-[7%] right-[-14%] z-0 w-[110%] max-w-[1150px] object-contain opacity-100 sm:right-[-3%] sm:w-[92%] lg:bottom-[4%] lg:right-[-3%] lg:w-[80%]" fetchpriority="high" />
+        <img id="hero-crane" src="./crane-background.png" alt="" class="hero-crane pointer-events-none absolute bottom-0 right-0 z-0 w-full max-w-[1150px] object-contain opacity-50 md:opacity-100 sm:bottom-[7%] sm:right-[-3%] sm:w-[92%] lg:bottom-[4%] lg:right-[-3%] lg:w-[80%]" fetchpriority="high" />
         <div class="hero-crane-overlay pointer-events-none absolute inset-0 z-[1]" aria-hidden="true"></div>
         <div class="grid-pattern pointer-events-none absolute inset-0 z-[2] opacity-50" aria-hidden="true"></div>
         <div class="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.15fr_.85fr] lg:px-12">
-          <div class="max-w-4xl">
+          <div class="hero-copy glass-surface max-w-4xl p-6 sm:p-9 lg:p-10 md:translate-y-6 lg:translate-y-8">
             <div class="mb-8 inline-flex items-center gap-3 rounded-full border border-ink/10 bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-ink/80 shadow-sm backdrop-blur">
               <span class="h-2 w-2 rounded-full bg-lime"></span>
               <span id="hero-kicker">ACE &amp; Farana crane hire</span>
@@ -96,16 +96,17 @@
         <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-lime"></div>
       </section>
 
-      <section id="fleet" class="relative z-20 -mt-14 pb-14 sm:-mt-16 sm:pb-20">
+      <section id="fleet" class="relative z-20 pt-12 pb-14 sm:pt-16 sm:pb-20">
         <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <div class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-[.2em] text-forest">Crane lineup / Coimbatore</p>
-              <h2 class="mt-1 font-display text-3xl font-extrabold uppercase tracking-wide">Find your lift.</h2>
+          <div class="section-panel rounded-3xl p-5 sm:p-8 lg:p-10">
+            <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div class="content-card glass-surface w-fit rounded-2xl px-5 py-4">
+                <p class="text-[10px] font-bold uppercase tracking-[.2em] text-forest">Crane lineup / Coimbatore</p>
+                <h2 class="mt-1 font-display text-3xl font-extrabold uppercase tracking-wide">Find your lift.</h2>
+              </div>
+              <p class="content-card glass-surface w-fit rounded-xl px-4 py-3 text-sm text-muted">Capacities for work of every scale.</p>
             </div>
-            <p class="text-sm text-muted">Capacities for work of every scale.</p>
-          </div>
-          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <article class="fleet-card rounded-2xl p-5">
               <div class="flex items-center justify-between">
                 <span class="flex h-10 w-10 items-center justify-center rounded-full bg-lime/20 text-forest">
@@ -146,23 +147,25 @@
               <p class="mt-4 font-display text-4xl font-extrabold">23 <span class="text-xl">TON</span></p>
               <a href="#contact" class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-forest">Enquire <span aria-hidden="true">↗</span></a>
             </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="services" class="py-24 sm:py-28">
         <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
-            <div>
-              <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">01 / What we do</p>
-              <h2 class="mt-4 max-w-lg font-display text-5xl font-extrabold uppercase leading-[.92] tracking-[-.02em] sm:text-6xl">Heavy lifting.<br />Handled right.</h2>
+          <div class="section-panel rounded-3xl p-5 sm:p-8 lg:p-10">
+            <div class="grid gap-5 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+              <div class="content-card glass-surface w-fit max-w-full rounded-2xl p-5 sm:p-6">
+                <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">01 / What we do</p>
+                <h2 class="mt-4 max-w-lg font-display text-5xl font-extrabold uppercase leading-[.92] tracking-[-.02em] sm:text-6xl">Heavy lifting.<br />Handled right.</h2>
+              </div>
+              <p class="content-card glass-surface max-w-xl rounded-2xl p-5 text-base leading-7 text-muted lg:justify-self-end sm:p-6">
+                Every site has its own constraints. We work with you to understand the job, coordinate the details, and support a smooth lift from setup through completion.
+              </p>
             </div>
-            <p class="max-w-xl text-base leading-7 text-muted lg:justify-self-end">
-              Every site has its own constraints. We work with you to understand the job, coordinate the details, and support a smooth lift from setup through completion.
-            </p>
-          </div>
 
-          <div class="mt-14 grid gap-4 md:grid-cols-3">
+          <div class="mt-8 grid gap-5 md:grid-cols-3 sm:mt-10">
             <article class="service-card group p-7 sm:p-8">
               <span class="service-index" aria-hidden="true">01</span>
               <span class="service-icon flex h-12 w-12 items-center justify-center bg-lime/30 text-forest">
@@ -199,10 +202,11 @@
               <a href="#contact" class="service-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-forest">Talk through your site <span aria-hidden="true">→</span></a>
             </article>
           </div>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="bg-white py-24 text-ink sm:py-28">
+      <section id="about" class="py-24 text-ink sm:py-28">
         <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20 lg:px-12">
           <div class="relative min-h-[390px] overflow-hidden rounded-3xl bg-[#314438]">
             <img
@@ -212,13 +216,13 @@
               loading="lazy"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
-            <div class="absolute bottom-7 left-7 right-7">
+            <div class="image-caption-card absolute bottom-5 left-5 right-5 rounded-2xl p-5 sm:bottom-7 sm:left-7 sm:right-7">
               <p class="font-display text-2xl font-bold">Good work begins with a clear plan.</p>
               <p class="mt-2 text-sm text-white/70">One job, one team, working in sync.</p>
             </div>
           </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-[.2em] text-lime">About Kavin Crane Service</p>
+          <div class="about-copy glass-surface p-7 sm:p-9 lg:p-10">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">About Kavin Crane Service</p>
             <h2 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">Serious about the details that keep a job moving.</h2>
             <p class="mt-6 text-base leading-7 text-ink/70">
               Lifting takes more than machinery. It takes preparation, communication, and people who understand how their work fits into yours. Kavin Crane Service is here to make crane hire and lifting support easier to plan.
@@ -233,22 +237,22 @@
 
       <section id="approach" class="py-24 sm:py-28">
         <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <div class="max-w-2xl">
+          <div class="content-card glass-surface w-fit max-w-2xl rounded-2xl p-6 sm:p-8">
             <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">A straightforward process</p>
             <h2 class="mt-4 font-display text-4xl font-extrabold tracking-[-.04em] sm:text-5xl">From first call to lift day.</h2>
           </div>
           <div class="mt-14 grid gap-8 md:grid-cols-3">
-            <div class="border-t border-ink/15 pt-6">
+            <div class="approach-step-card">
               <span class="font-display text-sm font-extrabold text-forest">01 / UNDERSTAND</span>
               <h3 class="mt-5 font-display text-xl font-bold">Tell us about the job</h3>
               <p class="mt-3 text-sm leading-6 text-muted">Share what needs lifting, your site conditions, and your expected timing.</p>
             </div>
-            <div class="border-t border-ink/15 pt-6">
+            <div class="approach-step-card">
               <span class="font-display text-sm font-extrabold text-forest">02 / COORDINATE</span>
               <h3 class="mt-5 font-display text-xl font-bold">Work through the details</h3>
               <p class="mt-3 text-sm leading-6 text-muted">We’ll discuss the requirements and the practical arrangements for your site.</p>
             </div>
-            <div class="border-t border-ink/15 pt-6">
+            <div class="approach-step-card">
               <span class="font-display text-sm font-extrabold text-forest">03 / GET TO WORK</span>
               <h3 class="mt-5 font-display text-xl font-bold">Move forward together</h3>
               <p class="mt-3 text-sm leading-6 text-muted">Keep communication clear as the job progresses, right through the lift.</p>
@@ -261,7 +265,7 @@
         <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl border border-ink/10 bg-white px-7 py-14 text-ink shadow-xl shadow-ink/5 sm:px-12 sm:py-16 lg:px-16">
           <div class="grid-pattern absolute inset-0 opacity-50" aria-hidden="true"></div>
           <div class="absolute -right-20 -top-32 h-96 w-96 rounded-full bg-lime/20 blur-3xl" aria-hidden="true"></div>
-          <div class="relative flex flex-col justify-between gap-9 lg:flex-row lg:items-end">
+          <div class="contact-intro content-card glass-surface relative flex flex-col justify-between gap-9 rounded-2xl p-6 sm:p-8 lg:flex-row lg:items-end">
             <div class="max-w-2xl">
               <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">Contact / Santhalingam M.</p>
               <h2 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-[-.04em] sm:text-5xl">Need a crane? Let’s talk.</h2>
@@ -277,22 +281,42 @@
             </div>
           </div>
 
-          <div id="contact-info" class="relative mt-10 grid gap-8 border-t border-ink/15 pt-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Phone</p>
+          <div id="contact-info" class="relative mt-10 grid gap-4 border-t border-ink/15 pt-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="contact-detail-card min-w-0 rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-3">
+                <span class="contact-detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 3.8h2.7l1.2 4.1-1.7 1.4a15.3 15.3 0 0 0 5.9 5.9l1.4-1.7 4.1 1.2v2.7a2 2 0 0 1-2.2 2A16.2 16.2 0 0 1 4.6 6a2 2 0 0 1 2-2.2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Phone</p>
+              </div>
               <a href="tel:+919585506829" class="mt-3 block text-sm font-bold text-ink hover:text-forest">+91 95855 06829</a>
               <a href="tel:+918770652271" class="mt-2 block text-sm font-bold text-ink hover:text-forest">+91 87706 52271</a>
             </div>
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Email</p>
+            <div class="contact-detail-card min-w-0 rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-3">
+                <span class="contact-detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 7 7.5 5.5L19.5 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Email</p>
+              </div>
               <a href="mailto:kavin.rental.service@gmail.com" class="mt-3 inline-block break-all text-sm font-bold text-ink hover:text-forest">kavin.rental.service@gmail.com</a>
             </div>
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Service area</p>
+            <div class="contact-detail-card min-w-0 rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-3">
+                <span class="contact-detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg>
+                </span>
+                <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Service area</p>
+              </div>
               <p class="mt-3 text-sm font-bold leading-6 text-ink">HOPS · Neelambur<br />Coimbatore</p>
             </div>
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Crane capacity</p>
+            <div class="contact-detail-card min-w-0 rounded-2xl p-5 sm:p-6">
+              <div class="flex items-center gap-3">
+                <span class="contact-detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M3 20h18M5 19V8h8v11m0-8h4l3 3v5m-7-4h3m-8 4v-3m8 3v-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 8V4h9l2 2h-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <p class="text-[10px] font-bold uppercase tracking-[.18em] text-muted">Crane capacity</p>
+              </div>
               <p class="mt-3 text-sm font-bold leading-6 text-ink">ACE: 12 &amp; 16 ton<br />Farana: 17 &amp; 23 ton</p>
             </div>
           </div>
@@ -300,8 +324,8 @@
       </section>
     </main>
 
-    <footer class="border-t border-black/10">
-      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 text-xs text-muted sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+    <footer>
+      <div class="footer-card glass-surface mx-5 mb-4 flex flex-col gap-4 rounded-2xl px-5 py-5 text-xs text-muted sm:mx-8 sm:px-8 md:flex-row md:items-center md:justify-between lg:mx-auto lg:max-w-7xl">
         <a href="#home" class="flex items-center gap-2 font-display font-extrabold tracking-wide text-ink">
           <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-lime text-ink" aria-hidden="true">
             <svg viewBox="0 0 32 32" class="h-5 w-5" fill="none"><path d="M7 25V7h15v6h4v5h-4v-5M7 11h11M22 18v4a4 4 0 1 1-8 0v-2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -333,9 +357,9 @@
           firstLine: "READY FOR",
           secondLine: "THE BIG LIFT.",
           description: "From 12 to 23 ton capacity, find practical crane support for your site and the lift ahead.",
-          image: "./about-crane.png",
-          alt: "ACE mobile crane ready for lifting work at an industrial site",
-          photo: true,
+          image: "./crane-background.png",
+          alt: "",
+          photo: false,
         },
         {
           kicker: "Coimbatore / crane rental",

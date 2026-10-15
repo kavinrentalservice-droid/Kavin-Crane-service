@@ -17,7 +17,7 @@ html {
 body {
   font-family: "DM Sans", sans-serif;
   background-color: #fff;
-  background-image: linear-gradient(rgba(248, 250, 252, .72), rgba(248, 250, 252, .72)), url("./page-background.jpg");
+  background-image: linear-gradient(rgba(248, 250, 252, .76), rgba(248, 250, 252, .76)), url("./crane-fleet-background.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -25,7 +25,7 @@ body {
 
 .glass-surface {
   border: 1px solid rgba(255, 255, 255, .78);
-  background: linear-gradient(135deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, .06));
+  background: linear-gradient(135deg, rgba(255, 255, 255, .46), rgba(255, 255, 255, .24));
   box-shadow: 0 24px 70px rgba(28, 38, 47, .12), inset 0 1px 0 rgba(255, 255, 255, .9);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
   backdrop-filter: blur(20px) saturate(140%);
@@ -40,7 +40,8 @@ header {
 }
 
 .site-nav {
-  box-shadow: 0 14px 42px rgba(28, 38, 47, .1), inset 0 1px 0 rgba(255, 255, 255, .9);
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .logo-card {
@@ -53,24 +54,46 @@ header {
 }
 
 .nav-link {
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, .58);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .4), rgba(255, 255, 255, .2));
+  box-shadow: 0 5px 16px rgba(28, 38, 47, .045), inset 0 1px 0 rgba(255, 255, 255, .55);
+  -webkit-backdrop-filter: blur(8px) saturate(125%);
+  backdrop-filter: blur(8px) saturate(125%);
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, color .2s ease;
 }
 
 .mobile-nav-link {
   border-color: rgba(255, 255, 255, .4);
-  background: rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .38);
 }
 
 .nav-link:hover {
-  border-color: rgba(255, 255, 255, .68);
-  background: rgba(255, 255, 255, .24);
-  box-shadow: 0 6px 18px rgba(28, 38, 47, .06);
+  border-color: rgba(255, 255, 255, .9);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .58), rgba(255, 255, 255, .34));
+  box-shadow: 0 8px 22px rgba(28, 38, 47, .09), inset 0 1px 0 rgba(255, 255, 255, .8);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
 .nav-contact {
   box-shadow: 0 8px 20px rgba(245, 184, 46, .22), inset 0 1px 0 rgba(255, 255, 255, .4);
+}
+
+.whatsapp-cta {
+  border-radius: 9999px;
+  background: #25d366;
+  color: #103c25;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, .2);
+}
+
+.whatsapp-cta:hover {
+  background: #128c7e;
+  color: #fff;
+}
+
+.whatsapp-cta:focus-visible {
+  outline: 3px solid #128c7e;
+  outline-offset: 3px;
 }
 
 .section-panel {
@@ -92,24 +115,17 @@ header {
   backdrop-filter: none;
 }
 
+.hero-copy {
+  border-color: transparent;
+  box-shadow: none;
+}
+
 .content-card {
   box-shadow: 0 14px 38px rgba(28, 38, 47, .07), inset 0 1px 0 rgba(255, 255, 255, .8);
 }
 
 .hero-image {
   background: transparent;
-}
-
-.hero-image::before {
-  position: absolute;
-  top: 15%;
-  right: 8%;
-  width: min(48vw, 620px);
-  aspect-ratio: 1;
-  border: 1px solid rgba(23, 25, 22, .12);
-  border-radius: 50%;
-  content: "";
-  pointer-events: none;
 }
 
 .hero-crane-overlay {
@@ -169,7 +185,7 @@ header {
 
 .fleet-card {
   border: 1px solid rgba(255, 255, 255, .86);
-  background: linear-gradient(145deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .05));
+  background: linear-gradient(145deg, rgba(255, 255, 255, .48), rgba(255, 255, 255, .28));
   box-shadow: 0 18px 48px rgba(28, 38, 47, .1), inset 0 1px 0 rgba(255, 255, 255, .9);
   -webkit-backdrop-filter: blur(16px) saturate(135%);
   backdrop-filter: blur(16px) saturate(135%);
@@ -186,7 +202,7 @@ header {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, .78);
   border-radius: 1.5rem;
-  background: linear-gradient(145deg, rgba(255, 255, 255, .18), rgba(255, 255, 255, .04));
+  background: linear-gradient(145deg, rgba(255, 255, 255, .44), rgba(255, 255, 255, .24));
   box-shadow: 0 18px 48px rgba(28, 38, 47, .09), inset 0 1px 0 rgba(255, 255, 255, .85);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
@@ -239,7 +255,7 @@ header {
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, .78);
   border-radius: 1.25rem;
-  background: linear-gradient(145deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .035));
+  background: linear-gradient(145deg, rgba(255, 255, 255, .44), rgba(255, 255, 255, .24));
   box-shadow: 0 16px 42px rgba(28, 38, 47, .08), inset 0 1px 0 rgba(255, 255, 255, .85);
   -webkit-backdrop-filter: blur(16px) saturate(135%);
   backdrop-filter: blur(16px) saturate(135%);
@@ -261,7 +277,7 @@ header {
 
 .contact-detail-card {
   border: 1px solid rgba(255, 255, 255, .68);
-  background: linear-gradient(145deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .015));
+  background: linear-gradient(145deg, rgba(255, 255, 255, .42), rgba(255, 255, 255, .22));
   box-shadow: 0 12px 32px rgba(28, 38, 47, .05), inset 0 1px 0 rgba(255, 255, 255, .65);
   -webkit-backdrop-filter: blur(8px) saturate(125%);
   backdrop-filter: blur(8px) saturate(125%);
@@ -288,7 +304,7 @@ header {
 
 .contact-detail-card:hover {
   transform: translateY(-3px);
-  background: linear-gradient(145deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04));
+  background: linear-gradient(145deg, rgba(255, 255, 255, .56), rgba(255, 255, 255, .32));
   box-shadow: 0 18px 38px rgba(28, 38, 47, .11), inset 0 1px 0 rgba(255, 255, 255, .98);
 }
 
@@ -307,7 +323,6 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .hero-image::before { top: 43%; right: -20%; width: 92vw; }
   .hero-title { font-size: clamp(2.75rem, 13vw, 4.25rem); }
   .hero-copy { border-radius: 1.5rem; }
   .hero-crane.hero-crane--photo {
